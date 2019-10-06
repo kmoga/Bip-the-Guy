@@ -78,11 +78,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cameraPressed(_ sender: UIButton) {
-        imagePicker.sourceType = .camera
-        
-        imagePicker.delegate = self
-        
-        present(imagePicker, animated: true, completion: nil)
         
         // Check to see if the camera is available.  If we didn't have this & clicked the "Camera" button in the simulator, our app would crash.
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
